@@ -13,7 +13,8 @@ public class RequirementsTest {
     @Test
     public void resources() {
 
-        Requirements r = new Requirements(new Warframe("T1", false), new Warframe("T2", false), new Warframe("T3", false), new Warframe("T4", false));
+        Requirements r = new Requirements(new Warframe("T1", false, null), new Warframe("T2", false, null), new Warframe("T3", false, null), new Warframe("T4", false, null));
+
         assertThat(r.resources(), notNullValue());
         List<Resource> resourceList = r.resources();
         assertThat(resourceList.size(), equalTo(4));

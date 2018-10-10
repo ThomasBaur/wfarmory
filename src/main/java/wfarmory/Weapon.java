@@ -1,6 +1,6 @@
 package wfarmory;
 
-public class Weapon extends ResourceBase implements Equippable {
+public class Weapon extends BuildableBase implements Equippable {
 
     public static enum Type {
         PRIMARY,
@@ -12,9 +12,9 @@ public class Weapon extends ResourceBase implements Equippable {
 
     private final Type type;
 
-    public Weapon(String name, Type type, boolean prime) {
+    public Weapon(String name, Type type, boolean prime, Requirements requirements) {
 
-        super(name, prime);
+        super(name, prime, requirements);
         this.type = type;
     }
 }

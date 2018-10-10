@@ -1,9 +1,9 @@
 package wfarmory;
 
-public class Warframe extends ResourceBase implements Equippable {
+public class Warframe extends BuildableBase implements Equippable {
 
-    public Warframe(String name, boolean prime) {
+    public Warframe(String name, boolean prime, Requirements requirements) {
 
-        super(name, prime);
+        super(name, prime, requirements);
     }
 }
