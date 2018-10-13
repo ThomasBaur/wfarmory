@@ -8,12 +8,22 @@ public class BuildableBase extends ResourceBase implements Buildable {
 
     @Accessors(fluent = true)
     @Getter
-    private final Requirements requirements;
+    protected final Requirements requirements;
 
 
     public BuildableBase(String name, boolean prime, Requirements requirements) {
 
         super(name, prime);
-        this.requirements = requirements;
+        this.requirements = requirements != null ? requirements : new Requirements();
+    }
+
+    @Override
+    public String toString() {
+
+        return "BuildableBase{" +
+                "requirements=" + requirements +
+                ", name='" + name + '\'' +
+                ", prime=" + prime +
+                '}';
     }
 }

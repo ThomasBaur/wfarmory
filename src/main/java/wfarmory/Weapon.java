@@ -17,4 +17,15 @@ public class Weapon extends BuildableBase implements Equippable {
         super(name, prime, requirements);
         this.type = type;
     }
+
+    @Override
+    public String toString() {
+
+        return "Weapon{" +
+                "type=" + type +
+                ", requirements=" + requirements +
+                ", name='" + name + '\'' +
+                ", prime=" + prime +
+                '}';
+    }
 }
